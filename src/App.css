@@ -1,0 +1,282 @@
+#myVideo{
+  position: absolute;
+  padding: none;
+}
+#cabecario{
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  margin-top: 5vh;
+}
+
+span {
+  position: relative;
+  z-index: 3;
+  font-size: 60%;
+}
+.btn{
+  width: 200px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer a,
+.btn a{
+  text-decoration: none;
+  border: 2px solid #fff;
+  padding: 15px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.btn a::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -2px;
+  width: calc(100% + 6px);
+  height: calc(100% - 10px);
+  background-color: #111111;
+  transition: all 0.5s ease-in-out;
+  transform: scaleY(1);
+}
+
+.btn a:hover::before{
+  transform: scaleY(0);
+}
+
+.btn a::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: -5px;
+  width: calc(100% - 10px);
+  height: calc(100% + 10px);
+  background-color: #111111;
+  transition: all 0.5s ease-in-out;
+  transform: scaleX(1);
+}
+.btn a:hover::after{
+  transform: scaleX(0);
+}
+.App-header {
+  background-color:#111111;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  background-size: 100%;
+}
+
+#pop-up{
+  visibility: hidden;
+  color: #111111;
+  display: flex;
+  font-size: 40px;
+  flex-direction: column;
+  align-items: center;
+  position: absolute !important;
+  z-index: 100;
+  margin-top: 10vh;
+  background-color: rgb(80, 95, 105);
+  margin-left: 40vh;
+  height: 75vh;
+  width: 120vh;
+  border-radius: 50px;
+}
+#form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+  width: 100%;
+  font-size: x-large;
+}
+#standard-basic, #standard-basic1{
+  font-size: large;
+  width: 75vh;
+}
+#outlined-multiline-static{
+  font-size: large;
+  width: 75vh;
+}
+#contato-subtitulo{
+  font-size: 25px;
+}
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#titulo{
+  margin-left: 5%;
+  margin-top: 5%;
+  border-color: #ffff;
+  border-width: 10cm;
+  border: solid;
+  width: 50%;
+  height: max-content;
+  padding-inline: 10vh;
+  padding-block-end: 10vh;
+}
+.container{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+#foto{
+  width: 50%;
+  height: 50%;
+  margin-left: 20%;
+  border-radius: 20vh;
+}
+
+.skills{
+  width: 100%;
+  max-width: 600px;
+  padding: 0 20px;
+}
+
+.skill-name{
+  font-size: 18px;
+  font-weight: 700;
+  color: #f1f1f1;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+
+.skill-bar{
+  height: 14px;
+  background: #000000;
+  border-radius: 3px;
+}
+#bars{
+  width: 90%;
+  margin-left: 6%;
+}
+.skill-per{
+  height: 14px;
+  background: #fff;
+  border-radius: 3px;
+  position: relative;
+  animation: fillBars 2.5s 1;
+}
+
+.skill-per::before{
+  content: attr(per);
+  position: absolute;
+  padding: 4px 6px;
+  background: #000000;
+  border-radius: 4px;
+  font-size: 12px;
+  top: -35px;
+  right: 0;
+  transform: translateX(50%);
+}
+.skill-per::after{
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #000000;
+  top: -15px;
+  right: 0;
+  transform: translateX(50%) rotate(45deg);
+  border-radius: 2px;
+}
+
+@keyframes fillBars{
+  from{
+    width: 0;
+  }
+  to{
+    width: 100%;
+  }
+}
+
+
+
+#tituloAnimation{
+  margin-left: 5%;
+  margin-top: 5%;
+  border-color: #ffff;
+  border-width: 10cm;
+  border: solid;
+  width: 50%;
+  height: max-content;
+  padding-inline: 10vh;
+  padding-block-end: 10vh;
+  background-image: repeating-linear-gradient(45deg, violet, indigo, blue, green, yellow, orange, red, violet);
+  background-size: 800% 800%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow 8s ease infinite;
+}
+
+#tituloPrincipal{
+  font-size: 200%;
+}
+#ajustar{
+  width: max-content;
+}
+#desenvolvedor{
+  margin-left: 1%;
+  margin-right: 1.5%;
+}
+#fotoMinha{
+  display: inline;
+}
+#gatos{
+  display: inline;
+}
+#subtitulo{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  font-size: 130%;
+  width: 92vh;
+}
+#typical{
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 150%;
+  font-weight: bolder;
+  height: min-content;
+  margin-top: -2.6vh;
+  background-image: none;
+  -webkit-text-fill-color: white;
+}
+@keyframes rainbow { 
+  0%{background-position:0% 50%}
+  50%{background-position:100% 25%}
+  100%{background-position:0% 50%}
+}
+#texto{
+  font-size: 100%;
+  margin-left: 8%;
+  height: max-content;
+  width: 90%;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 79vh;
+}
